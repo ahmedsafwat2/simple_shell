@@ -47,12 +47,10 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 
 int __getline(info_t *info, char **lineptr, size_t *n)
 {
-	int count = 0, fd, size_realloc = RB_SIZE;
+	int count = 0, size_realloc = RB_SIZE;
 	ssize_t r = 0;
 	int loop = 0;
 	char *buf = NULL;
-	char text[RB_SIZE];
-	char x;
 
 	do {
 		if (loop == 0)

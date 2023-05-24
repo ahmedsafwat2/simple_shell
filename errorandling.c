@@ -47,12 +47,8 @@ void _eputs(char *str)
 
 int _eputchar(char c)
 {
-	static int one;
 	static int i;
 	static char buf[WB_SIZE];
-	char *tmp;
-	info_t tmpinf;
-	size_t length;
 
 	if (c == B_FLUSH || i >= WB_SIZE)
 	{

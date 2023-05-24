@@ -21,9 +21,9 @@
 
 extern char **environ;
 
-#define BASE_INFO \
+#define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-		0, 0, 0}
+                0, 0, 0}
 /**
  * struct liststr - known as list_node
  * @num: the number field
@@ -156,5 +156,6 @@ int bfree(char **ptr);
 int is_chain(info_t *info, char *buf, size_t j);
 
 size_t print_list(const list_node *h);
+ssize_t input_buf(info_t *info, char **buf, size_t *len);
 
 #endif
